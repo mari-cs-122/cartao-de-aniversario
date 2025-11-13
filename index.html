@@ -2,154 +2,154 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FELIZ ANIVERSÁRIOOOOOOO!!!!!</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #fc9ad7,#fdb3e1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FELIZ ANIVERSÁRIOOOOOOO!!!!!</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #fc9ad7, #fdb3e1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      overflow: hidden;
+    }
 
-        .cartao {
-            position: relative;
-            width: 320px;
-            height: 220px;
-            perspective: 1000px;
-            cursor: pointer;
-        }
+    .cartao {
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      aspect-ratio: 16 / 9;
+      perspective: 1000px;
+      cursor: pointer;
+    }
 
-        .frente,
-        .dentro {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-            background: #fee6f5;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            backface-visibility: hidden;
-            transform-style: preserve-3d;
-            transition: transform 1s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+    .frente,
+    .dentro {
+      position: absolute;
+      inset: 0;
+      border-radius: 15px;
+      background: #fee6f5;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      transition: transform 1s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5%;
+      text-align: center;
+    }
 
-        .frente {
-            background: linear-gradient(135deg, #ffd4ff, #f36ecb);
-        }
+    .frente {
+      background: linear-gradient(135deg, #ffd4ff, #f36ecb);
+    }
 
-        .dentro {
-            background: linear-gradient(135deg,#ffd4ff, #f36ecb,);
-            transform: rotateY(180deg);
-        }
+    .dentro {
+      background: linear-gradient(135deg, #ffd4ff, #f36ecb);
+      transform: rotateY(180deg);
+    }
 
-        .cartao.aberto .frente {
-            transform: rotateY(-180deg);
-        }
+    .cartao.aberto .frente {
+      transform: rotateY(-180deg);
+    }
 
-        .cartao.aberto .dentro {
-            transform: rotateY(0deg);
-        }
+    .cartao.aberto .dentro {
+      transform: rotateY(0deg);
+    }
 
-        h1,
-        h2,
-        p {
-            margin: 10px 0;
-        }
+    h1 {
+      font-size: clamp(1.2rem, 4vw, 2rem);
+      margin: 10px 0;
+    }
 
-        .confete {
-            position: fixed;
-            top: -50px;
-            font-size: 24px;
-            animation: cair 4s linear forwards;
-            z-index: 1;
-            pointer-events: none;
-        }
+    h2 {
+      font-size: clamp(1rem, 3.5vw, 1.5rem);
+      margin: 10px 0;
+    }
 
-        @keyframes cair {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
-            }
+    p {
+      font-size: clamp(0.9rem, 3vw, 1.2rem);
+      margin: 10px 0;
+    }
 
-            100% {
-                transform: translateY(100vh) rotate(720deg);
-                opacity: 0;
-            }
-        }
-    </style>
+    .confete {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: cair 4s linear forwards;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes cair {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    /* 🔹 Responsividade extra para telas menores */
+    @media (max-width: 480px) {
+      .cartao {
+        aspect-ratio: 3 / 4;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="cartao" id="cartao">
-        <div class="frente">
-            <h1>🎉FELIZ ANIVERSÁRIOOO!!</h1>
-            <p><h2>✨Clique aqui mulher✨</h2></p>
-        </div>
-
-        <div class="dentro">
-            <h2> Parabéns Jenniiiiiiii🩷</h2>
-            <p>Obrigada por ser a pessoa que você é, que você tenha muitas felicidades na vida, Te amo muito🩷 (18 aninhos ta veia 😹 )
-            </p>
-        </div>
+  <div class="cartao" id="cartao">
+    <div class="frente">
+      <h1>🎉 FELIZ ANIVERSÁRIOOO!!</h1>
+      <h2>✨ Clique aqui mulher ✨</h2>
     </div>
-    <script>
-        const cartao = document.getElementById("cartao");
-        let intervaloConfete;
 
-        cartao.addEventListener("click", () => {
-            cartao.classList.toggle("aberto");
+    <div class="dentro">
+      <h2>Parabéns Jenniiiiiiii 🩷</h2>
+      <p>Obrigada por ser a pessoa que você é! Que você tenha muitas felicidades na vida.  
+        Te amo muito 🩷 (18 aninhos tá véia 😹)
+      </p>
+    </div>
+  </div>
 
-            if (cartao.classList.contains("aberto")) {
-                iniciarConfetes();
-            } else {
-                pararConfetes();
-            }
-        });
+  <script>
+    const cartao = document.getElementById("cartao");
+    let intervaloConfete;
 
-        function iniciarConfetes() {
-            intervaloConfete = setInterval(() => {
-                criarConfete();
-            }, 300);
-        }
+    cartao.addEventListener("click", () => {
+      cartao.classList.toggle("aberto");
+      if (cartao.classList.contains("aberto")) iniciarConfetes();
+      else pararConfetes();
+    });
 
-        function pararConfetes() {
-            clearInterval(intervaloConfete);
-        }
+    function iniciarConfetes() {
+      intervaloConfete = setInterval(criarConfete, 300);
+    }
 
-        function criarConfete() {
-            const confete = document.createElement("div");
-            confete.classList.add("confete");
+    function pararConfetes() {
+      clearInterval(intervaloConfete);
+    }
 
-            // alterna entre Hello Kittys e corações
-            if (Math.random() > 0.5) {
-                confete.textContent = "🎉🩷";
-            } else {
-                confete.textContent = "🐭😻";
-                
-            }
-
-            confete.style.left = Math.random() * window.innerWidth + "px";
-            confete.style.fontSize = Math.random() * 20 + 20 + "px";
-            confete.style.animationDuration = 3 + Math.random() * 2 + "s";
-
-            document.body.appendChild(confete);
-
-            // remove depois que cai
-            setTimeout(() => {
-                confete.remove();
-            }, 5000);
-        }
-
-    </script>
+    function criarConfete() {
+      const confete = document.createElement("div");
+      confete.classList.add("confete");
+      confete.textContent = Math.random() > 0.5 ? "🎉🩷" : "🐭😻";
+      confete.style.left = Math.random() * window.innerWidth + "px";
+      confete.style.fontSize = Math.random() * 20 + 20 + "px";
+      confete.style.animationDuration = 3 + Math.random() * 2 + "s";
+      document.body.appendChild(confete);
+      setTimeout(() => confete.remove(), 5000);
+    }
+  </script>
 </body>
 
 </html>
